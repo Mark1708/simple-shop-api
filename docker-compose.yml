@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  shop-db:
+    container_name: shop-db
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: shop_db
+      POSTGRES_USER: shop_user
+      POSTGRES_PASSWORD: shop_pass
+    ports:
+      - "55432:5432"
